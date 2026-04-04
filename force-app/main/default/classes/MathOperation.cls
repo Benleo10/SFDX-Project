@@ -26,9 +26,6 @@ public with sharing class MathOperation {
     }
 
     public Integer divide(Integer a, Integer b) {
-        if (b == 0) {
-            throw new ArithmeticException('Cannot divide by zero');
-        }
         Integer result = a / b;
         System.debug('Division = ' + result);
         return result;
