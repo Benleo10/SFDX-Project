@@ -13,6 +13,7 @@ What is the Variable?
         Similarly, a variable stores data or information, and we can use it whenever we need it. 
 
 Types of Variables:
+
     In Apex variables are divided in to 3 types.
 
     Local Variable:
