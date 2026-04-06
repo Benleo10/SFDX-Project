@@ -1,6 +1,17 @@
 # Salesforce DX Project: Next Steps
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Salesforce Basic:
+
+What is the Variable?
+
+    A variable is a place where we store data or information.
+    The value stored in a variable can change while the program is running, so it is called a variable.
+    Variables can be classified into different types based on the type of data they store (called data types).
+        Example:
+        Think of a variable like a container.
+        This container can store things like food, snacks, or water.
+        Similarly, a variable stores data or information, and we can use it whenever we need it. 
+
 
 ## How Do You Plan to Deploy Your Changes?
 
