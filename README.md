@@ -2,7 +2,7 @@
 
 Salesforce Basic:
 
-What is the Variable?
+1) What is the Variable?
 
     A variable is a place where we store data or information.
     The value stored in a variable can change while the program is running, so it is called a variable.
@@ -12,7 +12,7 @@ What is the Variable?
         This container can store things like food, snacks, or water.
         Similarly, a variable stores data or information, and we can use it whenever we need it. 
 
-Types of Variables:
+2) Types of Variables:
 
     In Apex variables are divided in to 3 types.
 
@@ -36,6 +36,48 @@ Types of Variables:
                 🧍 Local Variable → A student’s temporary note (used only during class)
                 👤 Instance Variable → Each student’s name (different for everyone)
                 🏫 Static Variable → School name (same for all students)
+
+3) Different Data Types:
+
+    A data type defines:
+    What kind of data a variable can store
+    How much memory it uses
+    What operations we can perform
+
+    Data type tells what kind of value we are storing in a variable
+
+    Apex data types are mainly divided into 2 categories:
+        -Primitive Data Types (Simple)
+            These store single values
+        -Non-Primitive Data Types (Complex)
+            These store multiple values or structured data
+
+4) Primitive Data Types:
+    Stores single value
+    Fast and simple
+    Directly stored in memory
+    eg:- Integer, Decimal, Boolean, Double, String, Id, Data, DateTime, Long
+
+5) Non-Primitive Data Types:
+    Stores multiple or complex values
+    Stored as reference
+    Flexible and powerful 
+    Also called as Reference Variable
+    eg:- Collections (List, Set, Map), sObjects, Classes/Objects, Enum
+
+    Real-Life Example
+        Think of a school:
+            Primitive → Student age, marks (single value)
+            Non-Primitive → Student record (name, class, marks together)
+
+ 
+
+
+
+
+        
+
+
 
 
 ## How Do You Plan to Deploy Your Changes?
