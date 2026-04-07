@@ -16,26 +16,26 @@ Salesforce Basic:
 
     In Apex variables are divided in to 3 types.
 
-    Local Variable:
+    a) Local Variable:
         Declared inside a method or block
         Can be used only within that method
         Created when the method starts and destroyed when it ends
 
-    Instance Variable (Non Static):
+    b) Instance Variable (Non Static):
         Declared inside a class but outside methods
         Each object (record) has its own copy
         Used to store object-specific data
 
-    Static Variable:
+    C) Static Variable:
         Declared using the keyword static
         Shared among all objects of the class
         Only one copy exists
 
             Easy Real-Life Example
                 Think of a classroom:
-                🧍 Local Variable → A student’s temporary note (used only during class)
-                👤 Instance Variable → Each student’s name (different for everyone)
-                🏫 Static Variable → School name (same for all students)
+                    Local Variable → A student’s temporary note (used only during class)
+                    Instance Variable → Each student’s name (different for everyone)
+                    Static Variable → School name (same for all students)
 
 3) Different Data Types:
 
@@ -65,12 +65,72 @@ Salesforce Basic:
     Also called as Reference Variable
     eg:- Collections (List, Set, Map), sObjects, Classes/Objects, Enum
 
+    for Non-Primitive we have to create a reference memory using the keyword NEW
+
     Real-Life Example
         Think of a school:
             Primitive → Student age, marks (single value)
             Non-Primitive → Student record (name, class, marks together)
 
- 
+
+ 6) Access Modifiers:
+        Who can access (use) a class, method, or variable
+    In simple words:
+        It controls visibility (who can see and use your code) 
+
+    There are 4 main access modifiers:
+        Public
+        Private
+        Protected
+        Global
+    
+    a) Public:-
+        Accessible within the same org
+        Can be used by other classes
+        eg:-
+            public class Demo {
+                public String name = 'Leo';
+            }
+
+    b) Private:-
+        Accessible only within the same class
+        Cannot be used outside the class
+        eg:-
+            public class Demo {
+                private Integer num = 10;
+
+                public void show() {
+                    System.debug(num); // ✅ Accessible here
+                }
+            }
+
+    c) Protected:-
+        Accessible within the same class
+        Accessible in child classes (inheritance)    
+        eg:-
+            public class Parent {
+                    protected String msg = 'Hello';
+            }
+
+            public class Child extends Parent {
+                    public void show() {
+                    System.debug(msg); // ✅ Accessible
+                 }
+            }
+
+    d) Global:-
+        Accessible everywhere
+        Used when exposing code outside Salesforce org (like APIs)
+        eg:-
+            global class Demo {
+                global void showMessage() {
+                System.debug('Hello');
+                }
+            }
+
+
+
+
 
 
 
