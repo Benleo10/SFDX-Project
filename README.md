@@ -129,6 +129,114 @@ Salesforce Basic:
             }
 
 
+7) What is Class?
+    Definition:
+    A class is a blueprint (template) used to create objects and organize code.
+    In simple words:
+    A class is a container that holds variables and methods
+    eg:- 
+        public class Student {
+            String name;
+            Integer age;
+        }
+            Here:
+            Student = Class
+            name, age = Variables inside the class
+    Real-Life Example:
+    Think of a class like a form/template 
+    Student form → Name, Age, Grade
+    You can create many students using the same template
+
+8) What is Method?
+    Definition:
+    A method is a block of code that performs a specific task.
+    In simple words:
+    Method = Action / Function inside a class
+    eg:-
+        public class Student {
+            String name;
+
+            public void showName() {
+                System.debug(name);
+            }
+        }
+    Here:
+        showName() = Method
+        It performs an action (prints name)
+
+9) Types of Method:
+    a) Method without return type:
+        A method without return value is a method that:
+        Performs an action
+        Does NOT return anything
+        In Apex, we use the keyword void
+        eg:-
+            public void greet() {
+                System.debug('Hello');
+            }
+    RealTime Example:
+        Think of a switch button 💡:
+        You press the switch → Light turns ON
+        But nothing is returned back to you
+    Same way:
+        Method runs → does work → no return
+    Key Points:
+        Use void
+        Used when you just want to perform action
+        No return statement required
+        Cannot store result in variable
+
+    b) Method with return value:
+        A method with return value is a method that:
+            Does some work and gives back (returns) a value
+        In simple words:
+            It performs an action and sends a result back
+        Syntax:
+            returnType methodName() {
+                // logic
+                return value;
+            }
+            returnType = Type of value it returns (Integer, String, etc.)
+        eg:-
+            public Integer getNumber() {
+                return 10;
+            }
+                Returns an Integer
+                Always gives back 10
+        How to get values:
+            Use a variable to get the return values based on the data type
+                Integer result = getNumber();
+                System.debug(result);
+    Important Rules:
+        Must specify return type
+        Must have return keyword
+        Return type and value should match
+        Method ends when return executed
+
+    c) Method with Parameter:
+        A method with parameters is a method that accepts input values when it is called.
+        In simple words:
+        We pass data into the method to do some work
+        Why do we use Parameters?
+            To make methods flexible
+            To avoid writing the same code again and again
+            To pass different values each time
+            eg:-
+                public class Demo {
+                    public void greet(String name) {
+                        System.debug('Hello ' + name);
+                    }
+                }
+                Demo d = new Demo();
+                d.greet('Leo');
+        Key Points:
+            Parameters are written inside brackets ()
+            You can pass multiple parameters
+            Data type must be specified
+
+
+
+
 
 
 
