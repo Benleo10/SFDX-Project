@@ -16,7 +16,7 @@ public with sharing class StudentMarkCalc {
     integer average;
     string grade;
 
-public StudentMarkClac(String name, Integer physicsMark, Integer chemistryMark, Integer mathMark) {
+public StudentMarkCalc(String name, Integer physicsMark, Integer chemistryMark, Integer mathMark) {
         this.name = name;
         this.physicsMark = physicsMark; 
         this.chemistryMark = chemistryMark;
