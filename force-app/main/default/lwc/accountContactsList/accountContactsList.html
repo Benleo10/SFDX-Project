@@ -2,7 +2,7 @@
   @description       : 
   @author            : ChangeMeIn@UserSettingsUnder.SFDoc
   @group             : 
-  @last modified on  : 04-13-2026
+  @last modified on  : 04-16-2026
   @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 -->
 <template>
@@ -11,46 +11,48 @@
             <div class="slds-p-around_medium slds-text-body_regular">Loading...</div>
         </template>
 
-        <template if:true={accounts} if:false={isLoading}>
-            <ul class="account-list" role="list">
-                <template for:each={accounts} for:item="acc">
-                    <li key={acc.Id} class="account-item">
-                        <div class="account-header slds-text-heading_small">
-                            <lightning-icon icon-name="standard:account" size="small" class="slds-m-right_x-small"></lightning-icon>
-                            <span>{acc.Name}</span>
-                        </div>
-                        <template if:true={acc.Contacts}>
-                            <div class="contacts">
-                                <div class="contacts-header slds-text-title_caps">Contacts</div>
-                                <table class="slds-table slds-table_cell-buffer slds-table_bordered">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Title</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">Phone</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <template for:each={acc.Contacts} for:item="con">
-                                            <tr key={con.Id}>
-                                                <td>{con.Name}</td>
-                                                <td>{con.Title}</td>
-                                                <td>{con.Email}
-                                                </td>
-                                                <td>{con.Phone}</td>
-                                            </tr>
-                                        </template>
-                                    </tbody>
-                                </table>
+        <template if:false={isLoading}>
+            <template if:true={accounts}>
+                <ul class="account-list" role="list">
+                    <template for:each={accounts} for:item="acc">
+                        <li key={acc.Id} class="account-item">
+                            <div class="account-header slds-text-heading_small">
+                                <lightning-icon icon-name="standard:account" size="small" class="slds-m-right_x-small"></lightning-icon>
+                                <span>{acc.Name}</span>
                             </div>
-                        </template>
-                        <template if:false={acc.Contacts}>
-                            <div class="slds-text-color_weak slds-m-left_medium">No contacts</div>
-                        </template>
-                    </li>
-                </template>
-            </ul>
+                            <template if:true={acc.Contacts}>
+                                <div class="contacts">
+                                    <div class="contacts-header slds-text-title_caps">Contacts</div>
+                                    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Title</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Phone</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <template for:each={acc.Contacts} for:item="con">
+                                                <tr key={con.Id}>
+                                                    <td>{con.Name}</td>
+                                                    <td>{con.Title}</td>
+                                                    <td>{con.Email}
+                                                    </td>
+                                                    <td>{con.Phone}</td>
+                                                </tr>
+                                            </template>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </template>
+                            <template if:false={acc.Contacts}>
+                                <div class="slds-text-color_weak slds-m-left_medium">No contacts</div>
+                            </template>
+                        </li>
+                    </template>
+                </ul>
+            </template>
         </template>
     </lightning-card>
 </template>
