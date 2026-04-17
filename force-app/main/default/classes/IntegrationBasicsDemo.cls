@@ -2,7 +2,7 @@
  * @description       : Integration Basics 1
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             : 
- * @last modified on  : 04-16-2026
+ * @last modified on  : 04-17-2026
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
 public with sharing class IntegrationBasicsDemo {
@@ -15,7 +15,7 @@ public with sharing class IntegrationBasicsDemo {
 
 
         HttpRequest request = new HttpRequest();
-        request.setEndpoint('https://fooapi.com/api/movies');
+        request.setEndpoint('Callout:DummyAPICallout/api/movies');
         request.setMethod('GET');
 
 
