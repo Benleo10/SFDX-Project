@@ -34,13 +34,13 @@ public with sharing class IntegrationMovies {
             Map<string,object> movieMap = (Map<string,object>)movieObject;
             integer MovieID = (integer)movieMap.get('id');
             string Title = (string)movieMap.get('title');
-            string Rating = (string)movieMap.get('rating');
+            string Rated = (string)movieMap.get('rating');
             integer Year = (integer)movieMap.get('year');
 
             Movie__c movie = new Movie__c();
-            movie.Movie_ID__c = MovieID;
+            movie.MovieID__c = MovieID;
             movie.Title__c = Title;
-            movie.Rating__c = Rating;
+            movie.Rated__c = Rated;
             movie.Year__c = Year;
 
             movieList.add(movie);
