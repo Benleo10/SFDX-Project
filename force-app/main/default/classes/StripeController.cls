@@ -23,9 +23,9 @@ public with sharing class StripeController {
         request.setMethod('POST');
 
         //Payload: RequestBody : name,email - encoded
-        string payload = 'name = ' + EncodedUtil.urlEncode(name,'UTF-8') + '& email = ' + EncodingUtil.urlEncode(email,'UTF-8');
+        string payload = 'name=' + EncodingUtil.urlEncode(name,'UTF-8') + '&email=' + EncodingUtil.urlEncode(email,'UTF-8');
         request.setBody(payload);
-
+        
         HTTPResponse response = http.send(request);
         system.debug('Response Status: ' + response.getStatusCode());
         system.debug('Response Body: ' + response.getBody());

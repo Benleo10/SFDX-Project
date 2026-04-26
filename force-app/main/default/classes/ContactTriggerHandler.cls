@@ -6,7 +6,7 @@
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
 public with sharing class ContactTriggerHandler {
-    public static void updateContactEmail(List<Contact> contacts) {
+    public static void handleAfterInsert(List<Contact> contacts) {
         for (Contact con : contacts) {
             string name = con.name;
         string email = con.email;
