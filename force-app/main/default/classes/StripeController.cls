@@ -25,7 +25,7 @@ public with sharing class StripeController {
         //Payload: RequestBody : name,email - encoded
         string payload = 'name=' + EncodingUtil.urlEncode(name,'UTF-8') + '&email=' + EncodingUtil.urlEncode(email,'UTF-8');
         request.setBody(payload);
-        
+
         HTTPResponse response = http.send(request);
         system.debug('Response Status: ' + response.getStatusCode());
         system.debug('Response Body: ' + response.getBody());
@@ -40,6 +40,8 @@ public with sharing class StripeController {
             Contact record = new Contact();
             record.Id = contactRecordId;
             record.StripeId__c = customerId;
+
+            //update record;
         }
         
 
