@@ -1,0 +1,39 @@
+/**
+ * @description       : 
+ * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+ * @group             : 
+ * @last modified on  : 05-02-2026
+ * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+**/
+public with sharing class OddEvenDIY {
+    
+    //Sum of odd values and Even Values
+    public integer sumOddValues(integer start,integer end){
+        integer sum = 0;
+        for(integer i=start; i<=end,i++)
+        {
+            if(i%2!=0)
+            {
+                sum = sum + i;
+                System.debug('Sum of Odd Values = '+Sum);
+            }
+        }
+        return sum;
+    }
+
+    public integer sumEvenValues(integer start,integer end){
+        integer sum = 0;
+        for(integer i=start; i<=end,i++)
+        {
+            if(i%2==0)
+            {
+                sum = sum + i;
+                System.debug('Sum of Even Values = '+Sum);
+            }
+        }
+        return sum;
+    }
+}
+
+
+
