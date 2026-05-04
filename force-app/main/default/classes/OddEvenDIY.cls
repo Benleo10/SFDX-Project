@@ -12,7 +12,7 @@ public with sharing class OddEvenDIY {
         integer sum = 0;
         for(integer i=start; i<=end,i++)
         {
-            if(i%2!=0)
+            if(math.mod(i,2)!=0)
             {
                 sum = sum + i;
                 System.debug('Sum of Odd Values = '+Sum);
@@ -25,7 +25,7 @@ public with sharing class OddEvenDIY {
         integer sum = 0;
         for(integer i=start; i<=end,i++)
         {
-            if(i%2==0)
+            if(math.mod(i,2)==0)
             {
                 sum = sum + i;
                 System.debug('Sum of Even Values = '+Sum);
