@@ -1,8 +1,8 @@
 /**
- * @description       : 
+ * @description       : Sum of Odd values and Even values Day 4
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             : 
- * @last modified on  : 05-02-2026
+ * @last modified on  : 05-04-2026
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
 public with sharing class OddEvenDIY {
