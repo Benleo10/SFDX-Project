@@ -7,14 +7,19 @@
 **/
 public with sharing class OddValuesDIY {
 
-    //Sum of odd values between 1 to 10 
-    public integer sumOddValues(integer start, integer endValue){
-        integer sum = 0;
-        for(integer i = start; i <= endValue; i++){
-            if(Math.mod(i, 2) != 0){
+    // Sum of odd numbers between start and endVal
+    public static Integer sumOddValues(Integer start, Integer finalValue) {
+
+        Integer sum = 0;
+
+        for(Integer i = start; i <= finalValue; i++) {
+
+            // Check if number is odd
+            if(Math.mod(i, 2) == 1) {
                 sum = sum + i;
             }
         }
+
         return sum;
     }
 }

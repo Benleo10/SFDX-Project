@@ -8,9 +8,9 @@
 public with sharing class OddEvenDIY {
     
     //Sum of odd values and Even Values
-    public integer sumOddValues(integer start,integer end){
+    public integer sumOddValues(integer start,integer finalValue){
         integer sum = 0;
-        for(integer i=start; i<=end,i++)
+        for(integer i=start; i<=finalValue; i++)
         {
             if(math.mod(i,2)!=0)
             {
@@ -21,9 +21,9 @@ public with sharing class OddEvenDIY {
         return sum;
     }
 
-    public integer sumEvenValues(integer start,integer end){
+    public integer sumEvenValues(integer start,integer finalValue){
         integer sum = 0;
-        for(integer i=start; i<=end,i++)
+        for(integer i=start; i<=finalValue; i++)
         {
             if(math.mod(i,2)==0)
             {
